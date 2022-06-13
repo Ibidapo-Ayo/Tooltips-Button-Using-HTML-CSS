@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+html,
+body {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  place-content: center;
+  background: linear-gradient(315deg, #fff, #d7e1ec);
+}
+h2 {
+  text-align: center;
+}
+.wrapper {
+  display: inline-flex;
+}
+.wrapper .icon {
+  position: relative;
+  background: #fff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 50px;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+/* .wrapper .tooltip-l {
+  position: absolute;
+  left: 0;
+  padding: 5px 8px;
+  background: #fff;
+  border-radius: 5px;
+  font-size: 14px;
+  opacity: 0;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+} */
+.icon-r {
+  align-items: flex-end;
+}
+.icon-u {
+  justify-content: center;
+  align-items: center;
+}
+.icon-u .fa-arrow-circle-up {
+  position: relative;
+  top: -8px;
+}
+.icon-d {
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-d .fa-arrow-circle-down {
+  position: relative;
+  bottom: -8px;
+}
+.wrapper .tooltip-l {
+  position: absolute;
+  left: 0;
+  font-size: 14px;
+  background: #fff;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .tooltip-l::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  bottom: 15px;
+  left: 100%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .tooltip-r {
+  position: absolute;
+  right: 0;
+  font-size: 14px;
+  background: #fff;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .tooltip-r::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #000;
+  bottom: 15px;
+  left: 0%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip-u {
+  position: absolute;
+  top: 0;
+  width: 50px;
+  padding: 10px 16px;
+  background: #fff;
+  border-radius: 5px;
+  font-size: 14px;
+  opacity: 0;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  text-align: center;
+  left: -10px;
+}
+.wrapper .tooltip-u::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #000;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .tooltip-d {
+  position: absolute;
+  bottom: 0;
+  width: 50px;
+  padding: 10px 16px;
+  background: #fff;
+  border-radius: 5px;
+  font-size: 14px;
+  opacity: 0;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  text-align: center;
+  left: -10px;
+}
+.wrapper .tooltip-d::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  bottom: 57px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip-l {
+  left: -85px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.wrapper .icon:hover .tooltip-r {
+  right: -100px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.wrapper .icon:hover .tooltip-u {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.wrapper .icon:hover .tooltip-d {
+  bottom: -65px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.wrapper .to-tips:hover,
+.wrapper .to-tips:hover .tooltip-l,
+.wrapper .to-tips:hover .tooltip-l::before {
+  background: #333;
+  color: #fff;
+}
+.wrapper .to-tips:hover,
+.wrapper .to-tips:hover .tooltip-r,
+.wrapper .to-tips:hover .tooltip-r::before {
+  background: #333;
+  color: #fff;
+}
+.wrapper .to-tips:hover,
+.wrapper .to-tips:hover .tooltip-u,
+.wrapper .to-tips:hover .tooltip-r::before {
+  background: #333;
+  color: #fff;
+}
+.wrapper .to-tips:hover,
+.wrapper .to-tips:hover .tooltip-u,
+.wrapper .to-tips:hover .tooltip-u::before {
+  background: #333;
+  color: #fff;
+}
+.wrapper .to-tips:hover,
+.wrapper .to-tips:hover .tooltip-d,
+.wrapper .to-tips:hover .tooltip-d::before {
+  background: #333;
+  color: #fff;
+}
+/* .wrapper .tooltip:hover .tips {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+} */
+
+.chrome-logo {
+  width: 300px;
+  height: 290px;
+  border-radius: 50%;
+  background: conic-gradient(red 0% 30%, yellow 30% 60%, green 60% 100%);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: green;
+  border: 4px solid white;
+}
